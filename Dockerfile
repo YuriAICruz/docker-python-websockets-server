@@ -6,7 +6,6 @@ RUN apt-get install -y python
 RUN apt-get install -y python-pip
 RUN apt-get install -y gunicorn
 RUN apt-get install -y git
-RUN apt-get update
 
 RUN cd /var/
 RUN git clone https://github.com/YuriAICruz/python-websockets-server.git
