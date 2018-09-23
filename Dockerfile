@@ -4,6 +4,8 @@ MAINTAINER Yuri Cruz
 
 EXPOSE 8000
 
+USER root
+
 RUN apt-get update
 RUN apt-get install -y python
 RUN apt-get install -y python-pip
@@ -20,6 +22,6 @@ RUN chmod -R +x /var/python-websockets-server/run.sh
 
 WORKDIR /var/python-websockets-server
 
-ADD run.sh /var/python-websockets-server/run.sh
+RUN chmod -R +x ./
 
 ENTRYPOINT ["/var/python-websockets-server/run.sh"] 
